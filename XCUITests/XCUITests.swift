@@ -17,7 +17,7 @@ class XCUITests: VolleyXCUITestBase {
         //set focus on Team Name Input
         let inputTeamName = app.textFields["Team Name"]
         inputTeamName.tap()
-        inputTeamName.typeText("MyNewTeamName")
+        inputTeamName.typeText(team1.teamName)
         
         //Hide On Screen Keyboard
         app.keyboards.buttons["Done"].tap()
@@ -25,11 +25,11 @@ class XCUITests: VolleyXCUITestBase {
         //set Skill Level at 7
         let slider = app.sliders["30%"]
         slider.tap()
-        slider.adjust(toNormalizedSliderPosition: 0.7)
+        slider.adjust(toNormalizedSliderPosition: team1.skillLevel)
         
         //set Attackers Formation to 6 attackers
         let attackersFormationPickerWheel = app/*@START_MENU_TOKEN@*/.pickerWheels["Attackers Formation"]/*[[".pickers.pickerWheels[\"Attackers Formation\"]",".pickerWheels[\"Attackers Formation\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        attackersFormationPickerWheel.adjust(toPickerWheelValue: "6 attackers")
+        attackersFormationPickerWheel.adjust(toPickerWheelValue: team1.attackers)
         
         //set Setters Formation to 2
         let settersFormationPickerWheel = app/*@START_MENU_TOKEN@*/.pickerWheels["Setters Formation"]/*[[".pickers.pickerWheels[\"Setters Formation\"]",".pickerWheels[\"Setters Formation\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/

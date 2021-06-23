@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		27C2A7662683AE7900D3332E /* XCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C2A7652683AE7900D3332E /* XCUITests.swift */; };
 		27C2A76D2683B01100D3332E /* XCUITestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C2A76C2683B01100D3332E /* XCUITestBase.swift */; };
+		27C2A76F2683DDEF00D3332E /* VolleyTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C2A76E2683DDEE00D3332E /* VolleyTeam.swift */; };
 		8409D7A51BA4A45E00D49AAF /* ManageTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409D7A41BA4A45E00D49AAF /* ManageTeamViewController.swift */; };
 		8409D7A81BA4AF5E00D49AAF /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409D7A71BA4AF5E00D49AAF /* ScheduleViewController.swift */; };
 		848766091B9E0DBB0031C38D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848766081B9E0DBB0031C38D /* WebViewController.swift */; };
@@ -33,6 +34,7 @@
 		27C2A7632683AE7900D3332E /* XCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C2A7652683AE7900D3332E /* XCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITests.swift; sourceTree = "<group>"; };
 		27C2A76C2683B01100D3332E /* XCUITestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITestBase.swift; sourceTree = "<group>"; };
+		27C2A76E2683DDEE00D3332E /* VolleyTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolleyTeam.swift; sourceTree = "<group>"; };
 		8409D7A41BA4A45E00D49AAF /* ManageTeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTeamViewController.swift; sourceTree = "<group>"; };
 		8409D7A71BA4AF5E00D49AAF /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		848766081B9E0DBB0031C38D /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				27C2A7652683AE7900D3332E /* XCUITests.swift */,
 				27C2A76C2683B01100D3332E /* XCUITestBase.swift */,
+				27C2A76E2683DDEE00D3332E /* VolleyTeam.swift */,
 			);
 			path = XCUITests;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C2A7662683AE7900D3332E /* XCUITests.swift in Sources */,
+				27C2A76F2683DDEF00D3332E /* VolleyTeam.swift in Sources */,
 				27C2A76D2683B01100D3332E /* XCUITestBase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
