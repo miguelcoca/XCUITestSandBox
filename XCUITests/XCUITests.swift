@@ -8,28 +8,34 @@
 
 import XCTest
 
-class XCUITests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+class XCUITests: VolleyXCUITestBase {
 
     func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
+        
+        app.tables/*@START_MENU_TOKEN@*/.staticTexts["Manage Team"]/*[[".cells.staticTexts[\"Manage Team\"]",".staticTexts[\"Manage Team\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        //set focus on Team Name Input
+        let inputTeamName = app.textFields["Team Name"]
+        inputTeamName.tap()
+        inputTeamName.typeText("MyNewTeamName")
+        
+        //Hide On Screen Keyboard
+        app.keyboards.buttons["Done"].tap()
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        //set Skill Level at 7
+        let slider = app.sliders["30%"]
+        slider.tap()
+        slider.adjust(toNormalizedSliderPosition: 0.7)
+        
+        //set Attackers Formation to 6 attackers
+        let attackersFormationPickerWheel = app/*@START_MENU_TOKEN@*/.pickerWheels["Attackers Formation"]/*[[".pickers.pickerWheels[\"Attackers Formation\"]",".pickerWheels[\"Attackers Formation\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        attackersFormationPickerWheel.adjust(toPickerWheelValue: "6 attackers")
+        
+        //set Setters Formation to 2
+        let settersFormationPickerWheel = app/*@START_MENU_TOKEN@*/.pickerWheels["Setters Formation"]/*[[".pickers.pickerWheels[\"Setters Formation\"]",".pickerWheels[\"Setters Formation\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        settersFormationPickerWheel.swipeUp()
+        
+        app.navigationBars["Manage Team"].buttons["Back"].tap()
     }
 
     func testLaunchPerformance() throws {
