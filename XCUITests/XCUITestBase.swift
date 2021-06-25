@@ -28,4 +28,20 @@ class VolleyXCUITestBase: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         app.terminate()
     }
+    
+    enum ElementState { case visible, invisible }
+    
+    func waitFor(_ element: XCUIElement, toBe state: ElementState, secondsToWait: Double=10) -> Bool {
+        let predicate = NSPredicate(format: "exists == \(state == .visible)")
+        let elementExpectation = expectation(for: predicate, evaluatedWith: element, handler: nil)
+        let result = XCTWaiter().wait(for: [elementExpectation], timeout: secondsToWait)
+        return result == .completed
+    }
+    
+    func hideKeyboard(){
+        let doneButton = XCUIApplication().buttons["Done"]
+        if waitFor(doneButton, toBe: .visible, secondsToWait: 5) {
+            doneButton.tap()
+        }
+    }
 }

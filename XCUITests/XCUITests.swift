@@ -20,7 +20,8 @@ class XCUITests: VolleyXCUITestBase {
         inputTeamName.typeText(team1.teamName)
         
         //Hide On Screen Keyboard
-        app.keyboards.buttons["Done"].tap()
+        super.hideKeyboard()
+        //app.keyboards.buttons["Done"].tap()
 
         //set Skill Level at 7
         let slider = app.sliders["30%"]
