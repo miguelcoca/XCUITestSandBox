@@ -13,7 +13,7 @@ class XCUITests: VolleyXCUITestBase {
     func testExample() throws {
         
         app.tables/*@START_MENU_TOKEN@*/.staticTexts["Manage Team"]/*[[".cells.staticTexts[\"Manage Team\"]",".staticTexts[\"Manage Team\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
+                
         //set focus on Team Name Input
         let inputTeamName = app.textFields["Team Name"]
         inputTeamName.tap()
